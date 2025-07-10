@@ -1,0 +1,20 @@
+{
+  "@@locale": "en",
+  "appTitle": "Contract & Insurance",
+  "contracts": "Contracts",
+  "insurances": "Insurances",
+  "dueDate": "Due Date",
+  "createdDate": "Created Date",
+  "sortAsc": "Sort Ascending",
+  "sortDesc": "Sort Descending",
+  "changeToEnglish": "Change To English",
+  "changeToBahasa": "Change To Bahasa",
+  "policy": "Policy",
+  "type": "Type",
+  "noPolicy": "Policy No.",
+  "amount": "Amount",
+  "empty": "Empty",
+  "statusActive": "Active",
+  "statusFinished": "Finished",
+  "statusRejected": "Rejected"
+}

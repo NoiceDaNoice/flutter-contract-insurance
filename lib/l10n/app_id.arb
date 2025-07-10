@@ -1,0 +1,20 @@
+{
+  "@@locale": "id",
+  "appTitle": "Kontrak & Asuransi",
+  "contracts": "Kontrak",
+  "insurances": "Asuransi",
+  "dueDate": "Tanggal Jatuh Tempo",
+  "createdDate": "Tanggal Dibuat",
+  "sortAsc": "Urut Naik",
+  "sortDesc": "Urut Turun",
+  "changeToEnglish": "Ubah ke Bahasa Inggris",
+  "changeToBahasa": "Ubah ke Bahasa Indonesia",
+  "policy": "Polis",
+  "type": "Tipe",
+  "noPolicy": "No Polis.",
+  "amount": "Jumlah",
+  "empty": "Kosong",
+  "statusActive": "Aktif",
+  "statusFinished": "Selesai",
+  "statusRejected": "Ditolak"
+}
