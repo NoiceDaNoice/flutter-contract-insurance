@@ -13,26 +13,24 @@ class ListViewData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: items.length+1,
-        itemBuilder: (context, index) {
-          if (index == items.length) {
-            return const SizedBox(height: 80); 
-          }
-          final item = items[index];
-          if (item is CombinedContract) {
-            return CustomContractContainer(
-              contract: item.contract,
-            );
-          } else if (item is CombinedInsurance) {
-            return CustomInsuranceContainer(
-              insurance: item.insurance,
-            );
-          }
-          return const SizedBox.shrink();
-        },
-      ),
+    return ListView.builder(
+      itemCount: items.length+1,
+      itemBuilder: (context, index) {
+        if (index == items.length) {
+          return const SizedBox(height: 80); 
+        }
+        final item = items[index];
+        if (item is CombinedContract) {
+          return CustomContractContainer(
+            contract: item.contract,
+          );
+        } else if (item is CombinedInsurance) {
+          return CustomInsuranceContainer(
+            insurance: item.insurance,
+          );
+        }
+        return const SizedBox.shrink();
+      },
     );
   }
 }
