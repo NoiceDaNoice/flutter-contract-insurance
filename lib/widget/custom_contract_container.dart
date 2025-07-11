@@ -3,6 +3,8 @@ import 'package:flutter_insurance_contract/model/contract_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 
+import 'util/status_util.dart';
+
 class CustomContractContainer extends StatelessWidget {
   final Contract contract;
   const CustomContractContainer({super.key, required this.contract});
@@ -10,19 +12,7 @@ class CustomContractContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppLocalizations l10n = AppLocalizations.of(context)!;
-    final localizedStatus = switch (contract.status.toLowerCase()) {
-      'active' => l10n.statusActive,
-      'finished' => l10n.statusFinished,
-      'rejected' => l10n.statusRejected,
-      _ => contract.status,
-    };
 
-    final statusColor = switch (contract.status.toLowerCase()) {
-      'active' => Colors.green,
-      'finished' => Colors.blue,
-      'rejected' => Colors.red,
-      _ => Colors.black,
-    };
     return Container(
       margin: const EdgeInsets.symmetric(
         vertical: 8,
@@ -49,9 +39,9 @@ class CustomContractContainer extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                localizedStatus,
+                StatusUtils.localizedStatus(context, contract.status),
                 style: TextStyle(
-                  color: statusColor,
+                  color: StatusUtils.statusColor(contract.status),
                 ),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
